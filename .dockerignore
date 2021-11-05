@@ -2,3 +2,4 @@ node_modules
 recipes
 npm-debug.log
 dist
+.env.local
