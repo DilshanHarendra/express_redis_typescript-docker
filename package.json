@@ -4,9 +4,9 @@
   "description": "This is a simple express application with docker and typescript",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon src/index.ts",
-    "start": "node --trace-warnings dist/src/index.js",
-    "build": "tsc -p ."
+    "dev": "NODE_ENV=local nodemon src/index.ts",
+    "start": "NODE_ENV=production node dist/src/index.js",
+    "build": "NODE_ENV=production tsc -p ."
   },
   "author": "Dilshan",
   "license": "ISC",
