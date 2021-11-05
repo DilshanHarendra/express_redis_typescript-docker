@@ -2,7 +2,12 @@ import express,{Application,Request,Response} from 'express'
 import dotenv from 'dotenv'
 import { createClient } from 'redis';
 const app:Application =express()
-dotenv.config()
+if (process.env.NODE_ENV=='local'){
+    dotenv.config({ path: `./.env.${process.env.NODE_ENV}` })
+}else{
+    dotenv.config()
+}
+
 
 const pubClient = createClient({port:parseInt(process.env.REDIS_PORT) ,host:process.env.REDIS_ENDPOINT,password:process.env.REDIS_PASSWORD});
 
