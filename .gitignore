@@ -2,6 +2,7 @@ node_modules/.bin/is-ci
 node_modules/
 .env
 .env.local
+.env.production
 .idea
 
 dist
